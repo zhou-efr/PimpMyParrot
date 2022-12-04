@@ -7,7 +7,7 @@ Inspir√© par [Dewalt-arch](https://github.com/Dewalt-arch/pimpmykali.git) trouv√
 - ZSH
 - OH My ZSH
 - Tilix
-- Root user
+- Set root user password
 - Openvpn
 ### Outils
 - Dirsearch
@@ -22,4 +22,4 @@ Inspir√© par [Dewalt-arch](https://github.com/Dewalt-arch/pimpmykali.git) trouv√
 - Winpeas.bat
 - Pentestmonkey php reverse shell
 - Linux static Netcat, Nmap, Python
-- Windows Netcat, Nmap 
+- Windows Netcat, Nmap
