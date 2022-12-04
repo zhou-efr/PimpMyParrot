@@ -115,3 +115,6 @@ wget https://www.python.org/ftp/python/3.11.0/python-3.11.0-embed-win32.zip -O p
 unzip python.zip
 rm python.zip
 cd /tmp
+
+# Wallpaper
+wget https://upload.wikimedia.org/wikipedia/commons/0/0f/Grosser_Panda.JPG -P ~/Pictures

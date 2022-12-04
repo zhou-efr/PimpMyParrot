@@ -1,4 +1,4 @@
-# Pimp My Parrot
+# Pimp My Parrot (WIP)
 Petit script pour installer rapidement quelques outils sur Parrot OS.
 Inspiré par [Dewalt-arch](https://github.com/Dewalt-arch/pimpmykali.git) trouvé dans le cours PEH de Heath Adams.
 
