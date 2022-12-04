@@ -63,6 +63,19 @@ go install github.com/ffuf/ffuf@latest
 echo -e "${GREEN}[+] Install subfinder${NC}"
 go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
 
+# Install Impacket
+# TODO : install other active directory tools later
+echo -e "${GREEN}[+] Install Impacket 0.10.0 in /opt${NC}"
+cd /opt
+wget https://github.com/SecureAuthCorp/impacket/releases/download/impacket_0_10_0/impacket-0.10.0.tar.gz
+tar -xf impacket-0.10.0.tar.gz
+cd impacket-0.10.0
+pip3 install -r requirements.txt
+python3 setup.py
+echo 'path+=("/opt/impacket-0.10.0/examples")' >> .zshrc
+rm impacket-0.10.0.tar.gz
+cd /tmp
+
 # Copy rockyou in /usr/share/wordlist
 echo -e "${GREEN}[+] Copy rockyou${NC}"
 cd /usr/share/wordlist
