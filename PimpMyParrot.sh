@@ -111,4 +111,7 @@ mkdir windows
 cd windows
 wget https://github.com/andrew-d/static-binaries/raw/master/binaries/windows/x86/ncat.exe
 wget https://github.com/andrew-d/static-binaries/raw/master/binaries/windows/x86/nmap.exe
+wget https://www.python.org/ftp/python/3.11.0/python-3.11.0-embed-win32.zip -O python.zip
+unzip python.zip
+rm python.zip
 cd /tmp
