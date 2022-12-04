@@ -28,7 +28,7 @@ sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools
 # Config OMZ theme - lukerandall
 echo -e "${GREEN}[+] Configure OMZ${NC}"
 rm ~/.zshrc
-wget <.zshrc github path>
+wget https://raw.githubusercontent.com/zhou-efr/PimpMyParrot/main/.zshrc
 
 # Set up root as user
 echo -e "${GREEN}[+] Setup root password${NC}"
