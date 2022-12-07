@@ -23,7 +23,7 @@ apt-get -y install zsh
 
 # Install Oh My ZSH
 echo -e "${GREEN}[+] Install Oh My ZSH${NC}"
-sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" --unattended
 
 # Config OMZ theme - lukerandall
 echo -e "${GREEN}[+] Configure OMZ${NC}"
