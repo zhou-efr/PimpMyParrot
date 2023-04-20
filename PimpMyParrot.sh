@@ -10,11 +10,11 @@ NC='\033[0m' # No Color
 
 # Update
 echo -e "${GREEN}[+] Apt update and upgrade${NC}"
-apt-get update
-apt-get upgrade
+apt-get update -y
+apt-get upgrade -y
 
 # Install tilix
-echo -e "${GREEN}[+] Install tilix terminal{NC}"
+echo -e "${GREEN}[+] Install tilix terminal${NC}"
 apt-get -y install tilix
 
 # Install ZSH
@@ -52,7 +52,7 @@ pip3 install -r requirements.txt
 python3 setup.py
 
 # Install WPScan
-echo -e "${GREEN}[+] Install exploitdb & searchsploit tools${NC}"
+echo -e "${GREEN}[+] Install wpscan${NC}"
 gem install wpscan
 
 # Install FFUF
@@ -62,6 +62,19 @@ go install github.com/ffuf/ffuf@latest
 # Install subfinder
 echo -e "${GREEN}[+] Install subfinder${NC}"
 go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
+
+# Install rdesktop
+echo -e "#{GREEN}[+] Install rdesktop${NC}"
+cd /opt
+wget https://github.com/rdesktop/rdesktop/releases/download/v1.9.0/rdesktop-1.9.0.tar.gz
+tar -xf rdesktop-1.9.0.tar.gz
+cd rdesktop-1.9.0.tar.gz
+./configure
+make
+make install
+cd ../
+rm rdesktop-1.9.0.tar.gz
+cd /tmp
 
 # Install Impacket
 # TODO : install other active directory tools later
@@ -73,6 +86,7 @@ cd impacket-0.10.0
 pip3 install -r requirements.txt
 python3 setup.py
 echo 'path+=("/opt/impacket-0.10.0/examples")' >> .zshrc
+cd ../
 rm impacket-0.10.0.tar.gz
 cd /tmp
 
