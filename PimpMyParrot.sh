@@ -65,7 +65,7 @@ cd /opt
 wget https://github.com/rdesktop/rdesktop/releases/download/v1.9.0/rdesktop-1.9.0.tar.gz
 tar -xf rdesktop-1.9.0.tar.gz
 cd rdesktop-1.9.0
-./configure
+./configure --disable-credssp --disable-smartcard
 make
 make install
 cd ../
