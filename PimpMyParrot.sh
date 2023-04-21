@@ -81,6 +81,7 @@ python3 -m pipx install impacket
 
 # Copy rockyou in /usr/share/wordlist
 echo -e "${GREEN}[+] Copy rockyou${NC}"
+mkdir /usr/share/wordlist
 cd /usr/share/wordlist
 wget https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt
 cd /tmp
