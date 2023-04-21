@@ -26,9 +26,9 @@ rm ~/.zshrc
 wget https://raw.githubusercontent.com/zhou-efr/PimpMyParrot/main/.zshrc
 
 # Set up root as user
-echo -e "${GREEN}[+] Setup root password${NC}"
-echo -e "${YELLOW}[!] Go to Control Center > Administration > Login Window > User and allow manual login${NC}"
-passwd
+# echo -e "${GREEN}[+] Setup root password${NC}"
+# echo -e "${YELLOW}[!] Go to Control Center > Administration > Login Window > User and allow manual login${NC}"
+# passwd
 
 # Install Openvpn
 echo -e "${GREEN}[+] Install openvpn${NC}"
