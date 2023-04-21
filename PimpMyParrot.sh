@@ -123,6 +123,21 @@ cd /tmp
 # Wallpaper
 wget https://upload.wikimedia.org/wikipedia/commons/0/0f/Grosser_Panda.JPG -P ~/Pictures
 
+# Install nvim
+echo -e "${GREEN}[+] Install nvim${NC}"
+sudo apt-get install neovim
+sudo apt-get install python3-neovim
+set CUSTOM_NVIM_PATH=/usr/local/bin/nvim.appimage
+# Set the above with the correct path, then run the rest of the commands:
+set -u
+sudo update-alternatives --install /usr/bin/ex ex "${CUSTOM_NVIM_PATH}" 110
+sudo update-alternatives --install /usr/bin/vi vi "${CUSTOM_NVIM_PATH}" 110
+sudo update-alternatives --install /usr/bin/view view "${CUSTOM_NVIM_PATH}" 110
+sudo update-alternatives --install /usr/bin/vim vim "${CUSTOM_NVIM_PATH}" 110
+sudo update-alternatives --install /usr/bin/vimdiff vimdiff "${CUSTOM_NVIM_PATH}" 110
+mkdir ~/.config/nvim
+wget https://raw.githubusercontent.com/zhou-efr/PimpMyParrot/main/init.vim -P ~/.config/nvim
+
 # Install ZSH
 echo -e "${GREEN}[+] Install zsh${NC}"
 apt-get -y install zsh
