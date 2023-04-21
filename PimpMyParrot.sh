@@ -61,6 +61,7 @@ go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
 
 # Install rdesktop
 echo -e "#{GREEN}[+] Install rdesktop${NC}"
+apt-get install libx11-dev libxcursor-dev pkg-config libtasn1-dev nettle-dev gnutls-dev
 cd /opt
 wget https://github.com/rdesktop/rdesktop/releases/download/v1.9.0/rdesktop-1.9.0.tar.gz
 tar -xf rdesktop-1.9.0.tar.gz
