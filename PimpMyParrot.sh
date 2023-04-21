@@ -1,6 +1,9 @@
 #!/bin/bash
 # run this script as root
 
+set -e
+[ `whoami` = root ] || { sudo "$0" "$@"; exit $?; }
+
 # Script configuration
 cd /tmp
 RED='\033[0;31m'
@@ -16,14 +19,6 @@ apt-get upgrade -y
 # Install tilix
 echo -e "${GREEN}[+] Install tilix terminal${NC}"
 apt-get -y install tilix
-
-# Install ZSH
-echo -e "${GREEN}[+] Install zsh${NC}"
-apt-get -y install zsh
-
-# Install Oh My ZSH
-echo -e "${GREEN}[+] Install Oh My ZSH${NC}"
-sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" --unattended
 
 # Config OMZ theme - lukerandall
 echo -e "${GREEN}[+] Configure OMZ${NC}"
@@ -49,7 +44,8 @@ cd /opt
 git clone https://github.com/maurosoria/dirsearch.git --depth 1
 cd dirsearch
 pip3 install -r requirements.txt
-python3 setup.py
+cd /tmp
+sudo cp -s /opt/dirsearch/dirsearch.py /usr/bin/dirsearch.py
 
 # Install WPScan
 echo -e "${GREEN}[+] Install wpscan${NC}"
@@ -132,3 +128,11 @@ cd /tmp
 
 # Wallpaper
 wget https://upload.wikimedia.org/wikipedia/commons/0/0f/Grosser_Panda.JPG -P ~/Pictures
+
+# Install ZSH
+echo -e "${GREEN}[+] Install zsh${NC}"
+apt-get -y install zsh
+
+# Install Oh My ZSH
+echo -e "${GREEN}[+] Install Oh My ZSH${NC}"
+sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" --unattended
