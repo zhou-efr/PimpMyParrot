@@ -61,7 +61,7 @@ go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
 
 # Install rdesktop
 echo -e "#{GREEN}[+] Install rdesktop${NC}"
-apt-get install libx11-dev libxcursor-dev pkg-config libtasn1-dev nettle-dev gnutls-dev
+apt-get install libx11-dev libxcursor-dev pkg-config libtasn1-dev nettle-dev gnutls-dev -y
 cd /opt
 wget https://github.com/rdesktop/rdesktop/releases/download/v1.9.0/rdesktop-1.9.0.tar.gz
 tar -xf rdesktop-1.9.0.tar.gz
@@ -75,17 +75,9 @@ cd /tmp
 
 # Install Impacket
 # TODO : install other active directory tools later
-echo -e "${GREEN}[+] Install Impacket 0.10.0 in /opt${NC}"
-cd /opt
-wget https://github.com/SecureAuthCorp/impacket/releases/download/impacket_0_10_0/impacket-0.10.0.tar.gz
-tar -xf impacket-0.10.0.tar.gz
-cd impacket-0.10.0
-pip3 install -r requirements.txt
-python3 setup.py
-echo 'path+=("/opt/impacket-0.10.0/examples")' >> .zshrc
-cd ../
-rm impacket-0.10.0.tar.gz
-cd /tmp
+echo -e "${GREEN}[+] Install Impacket and pipx${NC}"
+pip install pipx
+python3 -m pipx install impacket
 
 # Copy rockyou in /usr/share/wordlist
 echo -e "${GREEN}[+] Copy rockyou${NC}"
