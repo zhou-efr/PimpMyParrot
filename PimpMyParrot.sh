@@ -130,7 +130,6 @@ sudo apt-get install python3-neovim
 # sudo update-alternatives --install /usr/bin/view view "${CUSTOM_NVIM_PATH}" 110
 # sudo update-alternatives --install /usr/bin/vim vim "${CUSTOM_NVIM_PATH}" 110
 # sudo update-alternatives --install /usr/bin/vimdiff vimdiff "${CUSTOM_NVIM_PATH}" 110
-mkdir ~/.config/nvim
 wget https://raw.githubusercontent.com/zhou-efr/PimpMyParrot/main/init.vim -P ~/.config/nvim
 
 # Install ZSH
