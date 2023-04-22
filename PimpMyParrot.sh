@@ -123,6 +123,7 @@ echo -e "${GREEN}[+] Install nvim${NC}"
 apt-get install neovim
 apt-get install python3-neovim
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+rm ~/.config/nvim/init.vim
 wget https://raw.githubusercontent.com/zhou-efr/PimpMyParrot/main/init.vim -P ~/.config/nvim
 
 # Install ZSH
