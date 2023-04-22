@@ -20,11 +20,6 @@ apt-get upgrade -y
 echo -e "${GREEN}[+] Install tilix terminal${NC}"
 apt-get -y install tilix
 
-# Config OMZ theme - lukerandall
-echo -e "${GREEN}[+] Configure OMZ${NC}"
-rm ~/.zshrc
-wget https://raw.githubusercontent.com/zhou-efr/PimpMyParrot/main/.zshrc
-
 # Set up root as user
 # echo -e "${GREEN}[+] Setup root password${NC}"
 # echo -e "${YELLOW}[!] Go to Control Center > Administration > Login Window > User and allow manual login${NC}"
@@ -127,7 +122,7 @@ wget https://upload.wikimedia.org/wikipedia/commons/0/0f/Grosser_Panda.JPG -P ~/
 echo -e "${GREEN}[+] Install nvim${NC}"
 sudo apt-get install neovim
 sudo apt-get install python3-neovim
-set CUSTOM_NVIM_PATH=/usr/local/bin/nvim.appimage
+CUSTOM_NVIM_PATH=/usr/local/bin/nvim.appimage
 # Set the above with the correct path, then run the rest of the commands:
 set -u
 sudo update-alternatives --install /usr/bin/ex ex "${CUSTOM_NVIM_PATH}" 110
@@ -141,6 +136,11 @@ wget https://raw.githubusercontent.com/zhou-efr/PimpMyParrot/main/init.vim -P ~/
 # Install ZSH
 echo -e "${GREEN}[+] Install zsh${NC}"
 apt-get -y install zsh
+
+# Config OMZ theme - lukerandall
+echo -e "${GREEN}[+] Configure OMZ${NC}"
+rm ~/.zshrc
+wget https://raw.githubusercontent.com/zhou-efr/PimpMyParrot/main/.zshrc
 
 # Install Oh My ZSH
 echo -e "${GREEN}[+] Install Oh My ZSH${NC}"
