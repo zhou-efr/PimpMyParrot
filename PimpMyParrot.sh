@@ -74,6 +74,9 @@ echo -e "${GREEN}[+] Install Impacket and pipx${NC}"
 pip install pipx
 python3 -m pipx install impacket
 
+# SNMP tools
+apt-get install snmpd snmp
+
 # Copy rockyou in /usr/share/wordlist
 echo -e "${GREEN}[+] Copy rockyou${NC}"
 mkdir /usr/share/wordlist
@@ -111,7 +114,10 @@ cd windows
 wget https://github.com/andrew-d/static-binaries/raw/master/binaries/windows/x86/ncat.exe
 wget https://github.com/andrew-d/static-binaries/raw/master/binaries/windows/x86/nmap.exe
 wget https://www.python.org/ftp/python/3.11.0/python-3.11.0-embed-win32.zip -O python.zip
-unzip python.zip
+mkdir python
+cd python
+unzip ../python.zip
+cd ../
 rm python.zip
 cd /tmp
 
