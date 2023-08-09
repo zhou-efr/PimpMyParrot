@@ -151,7 +151,7 @@ wget https://raw.githubusercontent.com/zhou-efr/PimpMyParrot/main/.zshrc
 
 # Install Oh My ZSH
 echo_green "Install Oh My ZSH"
-sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" --unattended
+sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh) --unattended" 
 chsh -s $(which zsh)
 
 # Install rlwrap
