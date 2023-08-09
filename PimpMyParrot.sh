@@ -276,5 +276,6 @@ sudo apt-get install aptitude -y
 echo_green "All automatic installation done !"
 echo_yellow "however, you still need to run manually :"
 echo_yellow ' - [sudo aptitude install freerdp2-x11] to install freerdp2-x11, note that you will have to answer no then two times yes'
+echo_yellow ' - [bash -c  "$(wget -qO- https://git.io/vQgMr)" ] it is still highly probable that the auto install of gogh didn't worked xD"
 
 /bin/zsh
