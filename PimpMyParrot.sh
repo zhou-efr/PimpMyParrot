@@ -274,6 +274,6 @@ sudo apt-get install aptitude -y
 
 echo_green "All automatic installation done !"
 echo_yellow "however, you still need to run manually :"
-echo_yellow ' - [sudo aptitude install freerdp2-x11] to install freerdp2-x11, note that you\'ll have to answer no then two times yes'
+echo_yellow ' - [sudo aptitude install freerdp2-x11] to install freerdp2-x11, note that you will have to answer no then two times yes'
 
 /bin/zsh
