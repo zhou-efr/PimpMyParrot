@@ -15,6 +15,10 @@ function echo_green() {
   echo -e "\n\n${GREEN}[+] $1${NC}\n\n"
 }
 
+function echo_yellow() {
+  echo -e "\n\n${YELLOW}[!] $1${NC}\n\n"
+}
+
 # Update
 echo_green "Apt update and upgrade"
 sudo apt-get update -y
@@ -267,8 +271,8 @@ echo_green "Install aptitude"
 sudo apt-get install aptitude -y
 
 echo_green "All automatic installation done !"
-echo_green "however, you still need to run manually :"
-echo_green " - `chsh -s $(which zsh)` to change your default shell"
-echo_green " - `sudo aptitude install freerdp2-x11` to install freerdp2-x11, note that you'll have to answer no then two times yes"
+echo_yellow "however, you still need to run manually :"
+echo_yellow " - [chsh -s $(which zsh)] to change your default shell"
+echo_yellow " - [sudo aptitude install freerdp2-x11] to install freerdp2-x11, note that you'll have to answer no then two times yes"
 
 /bin/zsh
