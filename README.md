@@ -44,6 +44,7 @@ Certainly! Below is a categorized list of the installations and tools based on t
 - **ZSH and Oh My ZSH:** Extended Bourne Shell with a large number of improvements, including some features of Bash, ksh, and tcsh.
 - **nvim (Neovim):** A refactor of Vim aiming to improve the extensibility and maintainability of Vim.
 - **Gogh:** Terminal color scheme manager.
+- **xfreerdp:** A free implementation of the Remote Desktop Protocol (RDP). (manually installed with aptitude)
   
 ### **File Transfer and Web Server Tools:**
 - **WSGI:** A specification that describes how a web server communicates with web applications.
