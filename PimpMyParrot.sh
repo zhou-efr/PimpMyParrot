@@ -202,8 +202,9 @@ cd Veil/
 cd /tmp
 
 # Install py2exe
-echo_green "Install py2exe"
-pip install py2exe
+# TODO : fix this
+# echo_green "Install py2exe"
+# pip install py2exe
 
 # Install evil-winrm
 echo_green "Install evil-winrm"
@@ -241,14 +242,15 @@ echo_green "Install mitm6"
 pip3 install mitm6
 
 # Install Ident-user-enum
-echo_green "Install Ident-user-enum"
-cd /opt
-sudo mkdir ident-user-enum
-cd ident-user-enum
-sudo wget https://raw.githubusercontent.com/pentestmonkey/ident-user-enum/master/ident-user-enum.pl
-sudo chmod +x ident-user-enum.pl
-sudo ln -s /opt/ident-user-enum/ident-user-enum.pl /usr/bin/ident-user-enum.pl
-cd /tmp
+# TODO : Fix perl modules install silently
+# echo_green "Install Ident-user-enum"
+# cd /opt
+# sudo mkdir ident-user-enum
+# cd ident-user-enum
+# sudo wget https://raw.githubusercontent.com/pentestmonkey/ident-user-enum/master/ident-user-enum.pl
+# sudo chmod +x ident-user-enum.pl
+# sudo ln -s /opt/ident-user-enum/ident-user-enum.pl /usr/bin/ident-user-enum.pl
+# cd /tmp
 
 # Install Feroxbuster
 echo_green "Install Feroxbuster"
