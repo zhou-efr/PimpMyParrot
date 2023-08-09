@@ -160,6 +160,7 @@ echo_green "Configure OMZ"
 rm ~/.zshrc
 wget https://raw.githubusercontent.com/zhou-efr/PimpMyParrot/main/.zshrc -P ~/
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+zsh -ic "omz update"
 
 # Install rlwrap
 echo_green "Install rlwrap"
