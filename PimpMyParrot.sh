@@ -90,7 +90,7 @@ apt-get install snmpd snmp
 
 # Copy rockyou in /usr/share/wordlist
 echo_green "Copy rockyou"
-tar -xf /usr/share/wordlists/rockyou.txt.gz -C /usr/share/wordlists/
+sudo gzip -d /usr/share/wordlists/rockyou.txt.gz
 
 # Create transfert folder
 echo_green "Create a transfert folder"
