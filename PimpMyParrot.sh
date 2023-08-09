@@ -241,7 +241,7 @@ echo_green "Install Gogh"
 mkdir -p "$HOME/src"
 cd "$HOME/src"
 git clone https://github.com/Gogh-Co/Gogh.git gogh
-~/src/gogh/installs/bluloco-zsh-light.sh
+sh ~/src/gogh/installs/bluloco-zsh-light.sh
 cd /tmp
 
 # Install mitm6
