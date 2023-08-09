@@ -125,7 +125,7 @@ wget https://github.com/r3motecontrol/Ghostpack-CompiledBinaries/raw/master/Seat
 wget https://github.com/itm4n/PrintSpoofer/releases/download/v1.0/PrintSpoofer64.exe
 wget https://github.com/itm4n/PrintSpoofer/releases/download/v1.0/PrintSpoofer32.exe
 wget https://www.python.org/ftp/python/3.11.0/python-3.11.0-embed-win32.zip -O python.zip
-unzip ../python.zip -d python
+unzip python.zip -d python
 rm python.zip
 cd /tmp
 
