@@ -42,7 +42,7 @@ echo_green "Install dirsearch in opt"
 cd /opt
 sudo git clone https://github.com/maurosoria/dirsearch.git --depth 1
 cd dirsearch
-sudo pip3 install -r requirements.txt
+pip3 install -r requirements.txt
 cd /tmp
 sudo cp -s /opt/dirsearch/dirsearch.py /usr/bin/dirsearch.py
 
@@ -180,7 +180,7 @@ pip3 install wsgidav
 # Install CrackMapExec
 echo_green "Install CrackMapExec"
 cd /opt
-git clone https://github.com/mpgn/CrackMapExec
+sudo git clone https://github.com/mpgn/CrackMapExec
 cd CrackMapExec
 pipx install .
 cd /tmp
