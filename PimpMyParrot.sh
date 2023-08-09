@@ -187,8 +187,8 @@ cd /tmp
 
 # Install Shelter
 echo_green "Install Shelter"
-sudo apt install shellter
-sudo apt install wine
+sudo apt install shellter -y
+sudo apt install wine -y
 dpkg --add-architecture i386
 sudo apt-get update
 apt install -t parrot-backports wine32
@@ -212,7 +212,7 @@ gem install evil-winrm
 # Install python2
 echo_green "Install python2"
 cd /tmp
-sudo apt install python2
+sudo apt install python2 -y
 curl https://bootstrap.pypa.ip/pip/2.7/get-pip.py -o get-pip.py
 sudo python2 get-pip.py
 
@@ -222,11 +222,11 @@ curl -o- "https://dl-cli.pstmn.io/install/linux64.sh" | sh
 
 # Install Filezilla
 echo_green "Install Filezilla"
-sudo apt-get install filezilla
+sudo apt-get install filezilla -y
 
 # Install nsf-common
 echo_green "Install nsf-common"
-sudo apt-get install nfs-common
+sudo apt-get install nfs-common -y
 
 # Install Gogh
 echo_green "Install Gogh"
@@ -245,10 +245,10 @@ pip3 install mitm6
 # Install Ident-user-enum
 echo_green "Install Ident-user-enum"
 cd /opt
-mkdir ident-user-enum
+sudo mkdir ident-user-enum
 cd ident-user-enum
-wget https://raw.githubusercontent.com/pentestmonkey/ident-user-enum/master/ident-user-enum.pl
-chmod +x ident-user-enum.pl
+sudo wget https://raw.githubusercontent.com/pentestmonkey/ident-user-enum/master/ident-user-enum.pl
+sudo chmod +x ident-user-enum.pl
 sudo ln -s /opt/ident-user-enum/ident-user-enum.pl /usr/bin/ident-user-enum.pl
 cd /tmp
 
