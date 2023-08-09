@@ -189,9 +189,9 @@ cd /tmp
 echo_green "Install Shelter"
 sudo apt install shellter -y
 sudo apt install wine -y
-dpkg --add-architecture i386
-sudo apt-get update
-apt install -t parrot-backports wine32
+dpkg --add-architecture i386 -y
+sudo apt-get update -y
+apt install -t parrot-backports wine32 -y
 
 # Install Veil
 echo_green "Install Veil"
