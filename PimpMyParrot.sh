@@ -48,7 +48,7 @@ sudo cp -s /opt/dirsearch/dirsearch.py /usr/bin/dirsearch.py
 
 # Install WPScan
 echo_green "Install wpscan"
-gem install wpscan
+sudo gem install wpscan
 
 # Install FFUF
 echo_green "Install ffuf"
