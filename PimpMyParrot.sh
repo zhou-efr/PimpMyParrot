@@ -150,16 +150,16 @@ wget https://raw.githubusercontent.com/zhou-efr/PimpMyParrot/main/init.vim -P ~/
 echo_green "Install zsh"
 sudo apt-get -y install zsh
 
-# Config OMZ theme - lukerandall
-echo_green "Configure OMZ"
-rm ~/.zshrc
-wget https://raw.githubusercontent.com/zhou-efr/PimpMyParrot/main/.zshrc
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-
 # Install Oh My ZSH
 echo_green "Install Oh My ZSH"
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh) --unattended" 
 sudo chsh -s $(which zsh) $(whoami)
+
+# Config OMZ theme - lukerandall
+echo_green "Configure OMZ"
+rm ~/.zshrc
+wget https://raw.githubusercontent.com/zhou-efr/PimpMyParrot/main/.zshrc -P ~/
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
 # Install rlwrap
 echo_green "Install rlwrap"
