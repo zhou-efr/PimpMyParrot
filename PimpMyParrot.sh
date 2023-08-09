@@ -1,8 +1,8 @@
 #!/bin/bash
 # run this script as root
 
-set -e
-[ `whoami` = root ] || { sudo "$0" "$@"; exit $?; }
+# set -e
+# [ `whoami` = root ] || { sudo "$0" "$@"; exit $?; }
 
 # Script configuration
 cd /tmp
@@ -17,12 +17,12 @@ function echo_green() {
 
 # Update
 echo_green "Apt update and upgrade"
-apt-get update -y
-apt-get upgrade -y
+sudo apt-get update -y
+sudo apt-get upgrade -y
 
 # Install tilix
 echo_green "Install tilix terminal"
-apt-get -y install tilix
+sudo apt-get -y install tilix
 
 # Set up root as user
 # echo_green " $1 "
@@ -31,11 +31,11 @@ apt-get -y install tilix
 
 # Install Openvpn
 echo_green "Install openvpn"
-apt-get -y install openvpn
+sudo apt-get -y install openvpn
 
 # Install exploit-db & searchsploit
 echo_green "Install exploitdb & searchsploit tools"
-apt-get -y install exploitdb
+sudo apt-get -y install exploitdb
 
 # Install dirsearch
 echo_green "Install dirsearch in opt"
@@ -64,7 +64,7 @@ go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
 # or disable the feature using --disable-credssp.
 # ----------------------
 # echo -e "#{GREEN}[+] Install rdesktop${NC}"
-# apt-get install libx11-dev libxcursor-dev pkg-config libtasn1-dev nettle-dev gnutls-dev -y
+# sudo apt-get install libx11-dev libxcursor-dev pkg-config libtasn1-dev nettle-dev gnutls-dev -y
 # cd /opt
 # wget https://github.com/rdesktop/rdesktop/releases/download/v1.9.0/rdesktop-1.9.0.tar.gz
 # tar -xf rdesktop-1.9.0.tar.gz
@@ -86,7 +86,7 @@ python3 -m pipx install impacket
 
 # SNMP tools
 echo_green "Install SNMP tools"
-apt-get install snmpd snmp
+sudo apt-get install snmpd snmp
 
 # Copy rockyou in /usr/share/wordlist
 echo_green "Copy rockyou"
@@ -134,15 +134,15 @@ wget https://upload.wikimedia.org/wikipedia/commons/0/0f/Grosser_Panda.JPG -P ~/
 
 # Install nvim
 echo_green "Install nvim"
-apt-get install neovim
-apt-get install python3-neovim
+sudo apt-get install neovim
+sudo apt-get install python3-neovim
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 rm ~/.config/nvim/init.vim
 wget https://raw.githubusercontent.com/zhou-efr/PimpMyParrot/main/init.vim -P ~/.config/nvim
 
 # Install ZSH
 echo_green "Install zsh"
-apt-get -y install zsh
+sudo apt-get -y install zsh
 
 # Config OMZ theme - lukerandall
 echo_green "Configure OMZ"
@@ -156,7 +156,7 @@ chsh -s $(which zsh)
 
 # Install rlwrap
 echo_green "Install rlwrap"
-apt-get install rlwrap
+sudo apt-get install rlwrap
 
 # Install Maria DB
 echo_green "Install Maria DB"
@@ -190,7 +190,7 @@ echo_green "Install Shelter"
 sudo apt install shellter
 sudo apt install wine
 dpkg --add-architecture i386
-apt-get update
+sudo apt-get update
 apt install -t parrot-backports wine32
 
 # Install Veil
