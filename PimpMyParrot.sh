@@ -34,7 +34,7 @@ echo_green "Install openvpn"
 apt-get -y install openvpn
 
 # Install exploit-db & searchsploit
-echo -e "${GREEN}[+] Install exploitdb & searchsploit tools${NC}"
+echo_green "Install exploitdb & searchsploit tools"
 apt-get -y install exploitdb
 
 # Install dirsearch
