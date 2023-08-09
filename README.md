@@ -33,7 +33,6 @@ Certainly! Below is a categorized list of the installations and tools based on t
 - **Shellter:** A dynamic shellcode injection tool.
 - **Veil:** A tool designed to generate metasploit payloads that bypass common anti-virus solutions.
 - **evil-winrm:** The ultimate WinRM shell for hacking/pentesting.
-- **Ident-user-enum:** A simple PERL tool to enumerate users on a target system through the Ident service (113/TCP).
 - **Veil:** A tool for generating antivirus-evading payloads.
 - **Shelter:** An antivirus evasion tool.
 
@@ -55,7 +54,6 @@ Certainly! Below is a categorized list of the installations and tools based on t
 - **rlwrap:** A 'readline wrapper' that uses the GNU readline library to allow the editing of keyboard input for any command.
 - **python2 and python3:** Popular high-level scripting languages.
 - **Postman:** A platform for API development.
-- **py2exe:** A Python Distutils extension to convert Python scripts into executable Windows programs.
 
 ### **Miscellaneous Tools and Utilities:**
 - **SNMP tools (snmpd and snmp):** For monitoring networked devices.
