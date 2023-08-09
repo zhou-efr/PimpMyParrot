@@ -82,6 +82,8 @@ echo_green "Install Impacket and pipx"
 pip install pipx
 python3 -m pipx install impacket
 
+# Install xfreedp
+echo_green "Install xfreedp"
 
 
 # SNMP tools
@@ -152,7 +154,6 @@ wget https://raw.githubusercontent.com/zhou-efr/PimpMyParrot/main/.zshrc
 # Install Oh My ZSH
 echo_green "Install Oh My ZSH"
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh) --unattended" 
-chsh -s $(which zsh)
 
 # Install rlwrap
 echo_green "Install rlwrap"
@@ -260,5 +261,14 @@ curl -sL https://raw.githubusercontent.com/epi052/feroxbuster/main/install-nix.s
 echo_green "Add padding"
 mkdir -p ~/.config/gtk-3.0
 wget https://raw.githubusercontent.com/zhou-efr/PimpMyParrot/main/gtk.css -P ~/.config/gtk-3.0
+
+# Install aptitude
+echo_green "Install aptitude"
+sudo apt-get install aptitude -y
+
+echo_green "All automatic installation done !"
+echo_green "however, you still need to run manually :"
+echo_green " - `chsh -s $(which zsh)` to change your default shell"
+echo_green " - `sudo aptitude install freerdp2-x11` to install freerdp2-x11, note that you'll have to answer no then two times yes"
 
 /bin/zsh
