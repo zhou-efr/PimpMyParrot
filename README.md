@@ -3,7 +3,7 @@ Petit script pour installer rapidement quelques outils sur Parrot OS.
 Inspiré par [Dewalt-arch](https://github.com/Dewalt-arch/pimpmykali.git) trouvé dans le cours PEH de Heath Adams.
 
 ```bash
-curl https://raw.githubusercontent.com/zhou-efr/PimpMyParrot/main/PimpMyParrot.sh | sh
+wget -qO- https://raw.githubusercontent.com/zhou-efr/PimpMyParrot/main/PimpMyParrot.sh | bash
 ```
 
 ## Content
