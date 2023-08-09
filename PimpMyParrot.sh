@@ -40,9 +40,9 @@ sudo apt-get -y install exploitdb
 # Install dirsearch
 echo_green "Install dirsearch in opt"
 cd /opt
-git clone https://github.com/maurosoria/dirsearch.git --depth 1
+sudo git clone https://github.com/maurosoria/dirsearch.git --depth 1
 cd dirsearch
-pip3 install -r requirements.txt
+sudo pip3 install -r requirements.txt
 cd /tmp
 sudo cp -s /opt/dirsearch/dirsearch.py /usr/bin/dirsearch.py
 
