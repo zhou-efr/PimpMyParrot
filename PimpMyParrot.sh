@@ -154,6 +154,7 @@ sudo apt-get -y install zsh
 echo_green "Configure OMZ"
 rm ~/.zshrc
 wget https://raw.githubusercontent.com/zhou-efr/PimpMyParrot/main/.zshrc
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
 # Install Oh My ZSH
 echo_green "Install Oh My ZSH"
@@ -273,6 +274,6 @@ sudo apt-get install aptitude -y
 
 echo_green "All automatic installation done !"
 echo_yellow "however, you still need to run manually :"
-echo_yellow ' - [sudo aptitude install freerdp2-x11] to install freerdp2-x11, note that you'll have to answer no then two times yes'
+echo_yellow ' - [sudo aptitude install freerdp2-x11] to install freerdp2-x11, note that you\'ll have to answer no then two times yes'
 
 /bin/zsh
