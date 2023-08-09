@@ -59,18 +59,22 @@ echo_green "Install subfinder"
 go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
 
 # Install rdesktop
-echo -e "#{GREEN}[+] Install rdesktop${NC}"
-apt-get install libx11-dev libxcursor-dev pkg-config libtasn1-dev nettle-dev gnutls-dev -y
-cd /opt
-wget https://github.com/rdesktop/rdesktop/releases/download/v1.9.0/rdesktop-1.9.0.tar.gz
-tar -xf rdesktop-1.9.0.tar.gz
-cd rdesktop-1.9.0
-./configure --disable-smartcard # --disable-credssp
-make
-make install
-cd ../
-rm rdesktop-1.9.0.tar.gz
-cd /tmp
+# TODO : fix rdesktop install
+# CredSSP support requires GSSAPI, install the dependency
+# or disable the feature using --disable-credssp.
+# ----------------------
+# echo -e "#{GREEN}[+] Install rdesktop${NC}"
+# apt-get install libx11-dev libxcursor-dev pkg-config libtasn1-dev nettle-dev gnutls-dev -y
+# cd /opt
+# wget https://github.com/rdesktop/rdesktop/releases/download/v1.9.0/rdesktop-1.9.0.tar.gz
+# tar -xf rdesktop-1.9.0.tar.gz
+# cd rdesktop-1.9.0
+# ./configure --disable-smartcard # --disable-credssp
+# make
+# make install
+# cd ../
+# rm rdesktop-1.9.0.tar.gz
+# cd /tmp
 
 # Install Impacket
 # TODO : install other active directory tools later
@@ -251,5 +255,10 @@ cd /tmp
 # Install Feroxbuster
 echo_green "Install Feroxbuster"
 curl -sL https://raw.githubusercontent.com/epi052/feroxbuster/main/install-nix.sh | bash -s $HOME/.local/bin
+
+# Add padding
+echo_green "Add padding"
+mkdir -p ~/.config/gtk-3.0
+wget https://raw.githubusercontent.com/zhou-efr/PimpMyParrot/main/gtk.css -P ~/.config/gtk-3.0
 
 /bin/zsh
