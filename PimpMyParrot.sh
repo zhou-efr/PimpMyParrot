@@ -87,7 +87,7 @@ pip install pipx
 python3 -m pipx install impacket
 
 # Install xfreedp
-echo_green "Install xfreedp"
+# echo_green "Install xfreedp"
 
 
 # SNMP tools
@@ -142,7 +142,7 @@ wget https://upload.wikimedia.org/wikipedia/commons/0/0f/Grosser_Panda.JPG -P ~/
 echo_green "Install nvim"
 sudo apt-get install neovim
 sudo apt-get install python3-neovim
-sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+sudo sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 rm ~/.config/nvim/init.vim
 wget https://raw.githubusercontent.com/zhou-efr/PimpMyParrot/main/init.vim -P ~/.config/nvim
 
@@ -190,7 +190,7 @@ echo_green "Install CrackMapExec"
 cd /opt
 sudo git clone https://github.com/mpgn/CrackMapExec
 cd CrackMapExec
-pipx install .
+sudo pipx install .
 cd /tmp
 
 # Install Shelter
@@ -204,9 +204,9 @@ sudo apt install -t parrot-backports wine32 -y
 # Install Veil
 echo_green "Install Veil"
 cd /opt
-git clone https://github.com/Veil-Framework/Veil.git
+sudo git clone https://github.com/Veil-Framework/Veil.git
 cd Veil/
-./config/setup.sh --force --silent
+sudo ./config/setup.sh --force --silent
 cd /tmp
 
 # Install py2exe
@@ -216,7 +216,7 @@ cd /tmp
 
 # Install evil-winrm
 echo_green "Install evil-winrm"
-gem install evil-winrm
+sudo gem install evil-winrm
 
 # Install python2
 echo_green "Install python2"
@@ -227,7 +227,7 @@ sudo python2 get-pip.py
 
 # Install Postman
 echo_green "Install Postman"
-curl -o- "https://dl-cli.pstmn.io/install/linux64.sh" | sh
+curl -o- "https://dl-cli.pstmn.io/install/linux64.sh" | sudo sh
 
 # Install Filezilla
 echo_green "Install Filezilla"
@@ -241,8 +241,8 @@ sudo apt-get install nfs-common -y
 echo_green "Install Gogh"
 mkdir -p "$HOME/src"
 cd "$HOME/src"
-git clone https://github.com/Gogh-Co/Gogh.git gogh
-sh ~/src/gogh/installs/bluloco-zsh-light.sh
+sudo git clone https://github.com/Gogh-Co/Gogh.git gogh
+sudo sh ~/src/gogh/installs/bluloco-zsh-light.sh
 cd /tmp
 
 # Install mitm6
@@ -262,7 +262,7 @@ pip3 install mitm6
 
 # Install Feroxbuster
 echo_green "Install Feroxbuster"
-curl -sL https://raw.githubusercontent.com/epi052/feroxbuster/main/install-nix.sh | bash -s $HOME/.local/bin
+curl -sL https://raw.githubusercontent.com/epi052/feroxbuster/main/install-nix.sh | sudo bash -s $HOME/.local/bin
 
 # Add padding
 echo_green "Add padding"
@@ -273,9 +273,13 @@ wget https://raw.githubusercontent.com/zhou-efr/PimpMyParrot/main/gtk.css -P ~/.
 echo_green "Install aptitude"
 sudo apt-get install aptitude -y
 
+# Add bash path to zsh path
+echo_green "Add bash path to zsh path"
+echo 'export PATH=$PATH:/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin' >> ~/.zshrc
+
 echo_green "All automatic installation done !"
 echo_yellow "however, you still need to run manually :"
 echo_yellow ' - [sudo aptitude install freerdp2-x11] to install freerdp2-x11, note that you will have to answer no then two times yes'
-echo_yellow ' - [bash -c  "$(wget -qO- https://git.io/vQgMr)" ] it is still highly probable that the auto install of gogh didn't worked xD"
+echo_yellow ' - [bash -c  "$(wget -qO- https://git.io/vQgMr)" ] it is still highly probable that the auto install of gogh didn t worked xD'
 
 /bin/zsh
