@@ -18,7 +18,7 @@ sudo apt-get update -y
 sudo apt-get upgrade -y
 
 # Install base packages
-$packages = ("tilix" "git" "zsh" "openvpn" "exploitdb" "wpscan" "ffuf" "subfinder" "rlwrap" )
+packages = ("tilix" "git" "zsh" "openvpn" "exploitdb" "wpscan" "ffuf" "subfinder" "rlwrap")
 
 for package in $packages do
   echo_green "Install $package"
@@ -35,7 +35,7 @@ cd /tmp
 sudo cp -s /opt/dirsearch/dirsearch.py /usr/bin/dirsearch.py
 
 # Download base files
-$files = ("https://github.com/carlospolop/PEASS-ng/releases/download/20221204/linpeas.sh" "https://github.com/carlospolop/PEASS-ng/releases/download/20240221-e5eff12e/winPEASany_ofs.exe" "https://raw.githubusercontent.com/pentestmonkey/php-reverse-shell/master/php-reverse-shell.php" "https://github.com/andrew-d/static-binaries/raw/master/binaries/linux/x86_64/ncat" "https://github.com/andrew-d/static-binaries/raw/master/binaries/linux/x86_64/nmap" "https://github.com/andrew-d/static-binaries/raw/master/binaries/linux/x86_64/python" "https://github.com/andrew-d/static-binaries/raw/master/binaries/windows/x86/ncat.exe" "https://github.com/andrew-d/static-binaries/raw/master/binaries/windows/x86/nmap.exe" "https://github.com/r3motecontrol/Ghostpack-CompiledBinaries/raw/master/Seatbelt.exe" "https://github.com/itm4n/PrintSpoofer/releases/download/v1.0/PrintSpoofer64.exe" "https://github.com/itm4n/PrintSpoofer/releases/download/v1.0/PrintSpoofer32.exe" "https://www.python.org/ftp/python/3.11.0/python-3.11.0-embed-win32.zip")
+files = ("https://github.com/carlospolop/PEASS-ng/releases/download/20221204/linpeas.sh" "https://github.com/carlospolop/PEASS-ng/releases/download/20240221-e5eff12e/winPEASany_ofs.exe" "https://raw.githubusercontent.com/pentestmonkey/php-reverse-shell/master/php-reverse-shell.php" "https://github.com/andrew-d/static-binaries/raw/master/binaries/linux/x86_64/ncat" "https://github.com/andrew-d/static-binaries/raw/master/binaries/linux/x86_64/nmap" "https://github.com/andrew-d/static-binaries/raw/master/binaries/linux/x86_64/python" "https://github.com/andrew-d/static-binaries/raw/master/binaries/windows/x86/ncat.exe" "https://github.com/andrew-d/static-binaries/raw/master/binaries/windows/x86/nmap.exe" "https://github.com/r3motecontrol/Ghostpack-CompiledBinaries/raw/master/Seatbelt.exe" "https://github.com/itm4n/PrintSpoofer/releases/download/v1.0/PrintSpoofer64.exe" "https://github.com/itm4n/PrintSpoofer/releases/download/v1.0/PrintSpoofer32.exe" "https://www.python.org/ftp/python/3.11.0/python-3.11.0-embed-win32.zip")
 
 cd ~/documents
 for file in $files do
