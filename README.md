@@ -6,6 +6,12 @@ Inspir√© par [Dewalt-arch](https://github.com/Dewalt-arch/pimpmykali.git) trouv√
 wget -qO- https://raw.githubusercontent.com/zhou-efr/PimpMyParrot/main/PimpMyParrot.sh | bash
 ```
 
+or minimalist version for fast download (no AD setup)
+
+```bash
+wget -qO- https://raw.githubusercontent.com/zhou-efr/PimpMyParrot/main/MinimalistPimp.sh | bash
+```
+
 ## Content
 Certainly! Below is a categorized list of the installations and tools based on their primary use and function:
 

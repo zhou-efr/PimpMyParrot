@@ -40,9 +40,46 @@ for package in $packages do
   sudo apt-get -y install $package
 done
 
-# Copy rockyou in /usr/share/wordlist
+# Install dirsearch
+echo_green "Install dirsearch in opt"
+cd /opt
+sudo git clone https://github.com/maurosoria/dirsearch.git --depth 1
+cd dirsearch
+pip3 install -r requirements.txt
+cd /tmp
+sudo cp -s /opt/dirsearch/dirsearch.py /usr/bin/dirsearch.py
+
+# Download base files
+$files = (
+    "https://github.com/carlospolop/PEASS-ng/releases/download/20221204/linpeas.sh",
+    "https://github.com/carlospolop/PEASS-ng/releases/download/20240221-e5eff12e/winPEASany_ofs.exe",
+    "https://raw.githubusercontent.com/pentestmonkey/php-reverse-shell/master/php-reverse-shell.php",
+    "https://github.com/andrew-d/static-binaries/raw/master/binaries/linux/x86_64/ncat",
+    "https://github.com/andrew-d/static-binaries/raw/master/binaries/linux/x86_64/nmap",
+    "https://github.com/andrew-d/static-binaries/raw/master/binaries/linux/x86_64/python",
+    "https://github.com/andrew-d/static-binaries/raw/master/binaries/windows/x86/ncat.exe",
+    "https://github.com/andrew-d/static-binaries/raw/master/binaries/windows/x86/nmap.exe",
+    "https://github.com/r3motecontrol/Ghostpack-CompiledBinaries/raw/master/Seatbelt.exe",
+    "https://github.com/itm4n/PrintSpoofer/releases/download/v1.0/PrintSpoofer64.exe",
+    "https://github.com/itm4n/PrintSpoofer/releases/download/v1.0/PrintSpoofer32.exe",
+    "https://www.python.org/ftp/python/3.11.0/python-3.11.0-embed-win32.zip"
+)
+
+cd ~/documents
+for file in $files do
+  echo_green "Download $file"
+  wget $file
+done
+cd /tmp
+
+# Copy rockyou in /usr/share/wordlist or download it if it doesn't exist
 echo_green "Copy rockyou"
+if [ ! -f /usr/share/wordlists/rockyou.txt ]; then
+    sudo mkdir -p /usr/share/wordlists
+    sudo wget https://raw.githubusercontent.com/zhou-efr/PimpMyParrot/main/rockyou.txt.gz -P /usr/share/wordlists
+fi
 sudo gzip -d /usr/share/wordlists/rockyou.txt.gz
+
 
 # Install Oh My ZSH
 echo_green "Install Oh My ZSH"
@@ -64,6 +101,11 @@ wget https://raw.githubusercontent.com/zhou-efr/PimpMyParrot/main/gtk.css -P ~/.
 # Install aptitude
 echo_green "Install aptitude"
 sudo apt-get install aptitude -y
+
+# Download cameronhighlands.jpg to /usr/share/backgrounds and set it as wallpaper
+echo_green "Download cameronhighlands.jpg"
+sudo wget https://raw.githubusercontent.com/zhou-efr/PimpMyParrot/main/cameronhighlands.jpg -P /usr/share/backgrounds
+gsettings set org.gnome.desktop.background picture-uri file:///usr/share/backgrounds/cameronhighlands.jpg
 
 # Add bash path to zsh path
 echo_green "Add bash path to zsh path"
