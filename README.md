@@ -1,6 +1,21 @@
-# Pimp My Parrot (WIP)
+# Pimp My Parrot 
 Petit script pour installer rapidement quelques outils sur Parrot OS.
 Inspiré par [Dewalt-arch](https://github.com/Dewalt-arch/pimpmykali.git) trouvé dans le cours PEH de Heath Adams.
+
+## Quick debian
+The quick setup requires a sudo user.
+```bash
+apt-get install sudo -y
+sudo usermod -a -G sudo [user]
+```
+
+Oneliner to setup a basic debian environment.
+```bash
+wget -qO- https://raw.githubusercontent.com/zhou-efr/PimpMyParrot/main/QuickDebian.sh | bash
+```
+
+## Old
+Those script may still work but I'm not sure about this...
 
 ```bash
 wget -qO- https://raw.githubusercontent.com/zhou-efr/PimpMyParrot/main/PimpMyParrot.sh | bash
@@ -13,7 +28,7 @@ wget -qO- https://raw.githubusercontent.com/zhou-efr/PimpMyParrot/main/Minimalis
 ```
 
 ## Content
-Certainly! Below is a categorized list of the installations and tools based on their primary use and function:
+Below is a categorized list of the installations and tools based on their primary use and function:
 
 ---
 
