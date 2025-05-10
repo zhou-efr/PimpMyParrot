@@ -18,8 +18,8 @@ echo_green "Apt update and upgrade"
 sudo apt-get update -y
 sudo apt-get upgrade -y
 
-echo_green "Apt get git, curl, zsh and openssh"
-sudo apt-get -y install git zsh curl openssh-server
+echo_green "Apt get git, curl and zsh"
+sudo apt-get -y install git zsh curl
 
 echo_green "Install oh-my-zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
