@@ -24,11 +24,12 @@ sudo apt-get -y install git zsh curl
 echo_green "Install oh-my-zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+echo_green "Setup custom zsh"
+rm ~/.zshrc
+wget https://raw.githubusercontent.com/zhou-efr/PimpMyParrot/refs/heads/main/.zshrc -P ~
+
 echo_green "Install autosuggest plugin"
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
-echo_green "Setup custom zsh"
-rm ~/.zshrc
-wget https://raw.githubusercontent.com/zhou-efr/PimpMyParrot/refs/heads/main/.zshrc
 
 
