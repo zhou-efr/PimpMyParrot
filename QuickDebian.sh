@@ -31,5 +31,5 @@ wget https://raw.githubusercontent.com/zhou-efr/PimpMyParrot/refs/heads/main/.zs
 echo_green "Install autosuggest plugin"
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
-
-
+echo_green "Set zsh as default shell"
+chsh -s $(which zsh)
