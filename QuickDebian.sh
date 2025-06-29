@@ -31,5 +31,10 @@ wget https://raw.githubusercontent.com/zhou-efr/PimpMyParrot/refs/heads/main/.zs
 echo_green "Install autosuggest plugin"
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
+# Add padding
+echo_green "Add padding"
+mkdir -p ~/.config/gtk-3.0
+wget https://raw.githubusercontent.com/zhou-efr/PimpMyParrot/main/gtk.css -P ~/.config/gtk-3.0
+
 echo_green "Set zsh as default shell"
 chsh -s $(which zsh)
