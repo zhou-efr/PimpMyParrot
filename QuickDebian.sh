@@ -37,5 +37,5 @@ mkdir -p ~/.config/gtk-3.0
 wget https://raw.githubusercontent.com/zhou-efr/PimpMyParrot/main/gtk.css -P ~/.config/gtk-3.0
 
 echo_green "Set zsh as default shell"
-chsh -s $(which zsh)
 echo_yellow 'If failed run : chsh -s $(which zsh)'
+chsh -s $(which zsh)
